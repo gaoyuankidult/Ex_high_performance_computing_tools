@@ -1,0 +1,40 @@
+The excercise source code: ex04.f90
+
+The excutable of source code : a.out
+
+Time data collected by source code ex04.f90: data.dat
+
+Backup of data: data_completed.dat
+
+Log-log plot between two kinds of multiplication runnning times:log_log_plot_do_loop_and_matmul.png
+
+Normal plot between dimension and two kinds of multiplication runnning times: normal_plot_do_loop_and_matmul.png
+
+Script file that takes care of plotting:plot.py
+
+
+SYSTEM INFORMATION:
+
+model name      : Intel(R) Core(TM) i7-2670QM CPU @ 2.20GHz
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04.3 LTS
+Release:	12.04
+Codename:	precise
+
+GFORTRAN INFORMATION
+
+Using built-in specs.
+COLLECT_GCC=gfortran
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.6/lto-wrapper
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu/Linaro 4.6.3-1ubuntu5' --with-bugurl=file:///usr/share/doc/gcc-4.6/README.Bugs --enable-languages=c,c++,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.6 --enable-shared --enable-linker-build-id --with-system-zlib --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.6 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --enable-plugin --enable-objc-gc --disable-werror --with-arch-32=i686 --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+
+COMPILER OPTION
+
+none
+
+RUNNNING ENVIRONMENT
+
+gnome-terminal
+

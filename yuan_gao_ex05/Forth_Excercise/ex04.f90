@@ -11,8 +11,8 @@ program test_read
   ivalue = 0
   old_ivalue = 0
   long_seq_value = 0
-  !open (unit=15, file="pi4e6.dat")  
-  open (unit=15, file="test.dat")
+  open (unit=15, file="pi4e6.dat")  
+  !open (unit=15, file="test.dat")
   do while(1 == 1)
      read (15,'(A1)',advance='NO', iostat = io),buffer
      ivalue = ichar(buffer) -48

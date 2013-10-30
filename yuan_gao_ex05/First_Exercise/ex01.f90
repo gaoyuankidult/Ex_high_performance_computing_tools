@@ -35,7 +35,7 @@ program ackermann_prog
   integer::ack_value
   print*,"Do you want to monitor the process ? (1 for yes, else for no)" 
   read(*,*),monitor
-  ack_value = ack(2, 0) 
+  ack_value = ack(3, 7) 
   print*,"The answer of ackermann function is :", ack_value
   print*,"The maximum depth of recursion is   :", max
 end program ackermann_prog

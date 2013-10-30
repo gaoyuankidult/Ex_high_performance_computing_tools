@@ -1,0 +1,48 @@
+a) Setting breakpoints: Print out the value of the arguments b and x in the beginning of routine
+gauss.
+
+Answer: 
+
+The commands that typed in gdb are:
+
+gofrtran -g gauss.f90
+gdb ./a.out
+run < matrix  
+print x
+print b
+
+Output of print x :
+$1 = (2.3766352864097552e-312, 0, 3.1124475627428506e-317, 0)
+
+Output of print b :
+$2 = (0.428892365341, 0.30461736686939, 0.18965374754716999, 0.19343115640521999)
+
+
+b) Monitor the value of a variable: What are the values of the variable ss for all iterations
+in the backsubst loop of routine gauss?
+
+Answer:
+The conmands typed in the gdb are :
+
+watch ss
+set logging file gdb.txt
+set logging on
+
+
+The output is recorded in file gdb.txt
+As a consequense, the value of ss in the for all iterations
+in the backsubst loop of routine gauss are:
+
+New value = 6.9533558074437043e-310
+New value = -0.36924162090909646
+New value = -0.20807911638869767
+New value = -0.028288423962739256
+New value = -0.10772584337145805
+New value = -0.090112438506848122
+New value = -0.0069926683737533274
+New value = 0.428892365341
+New value = 0.43178716855547911
+New value = 0.44082869712412048
+New value = 0.44743905642244847
+
+

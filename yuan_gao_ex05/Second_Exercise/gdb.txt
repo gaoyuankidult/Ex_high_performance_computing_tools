@@ -1,0 +1,79 @@
+Continuing.
+Hardware watchpoint 2: ss
+
+Old value = 6.9533558074437043e-310
+New value = -0.36924162090909646
+gauss (a=..., b=..., x=...) at gauss.f90:56
+56	     do j=i+1,MATSIZE
+Continuing.
+Hardware watchpoint 2: ss
+
+Old value = -0.36924162090909646
+New value = -0.20807911638869767
+gauss (a=..., b=..., x=...) at gauss.f90:56
+56	     do j=i+1,MATSIZE
+Continuing.
+Hardware watchpoint 2: ss
+
+Old value = -0.20807911638869767
+New value = -0.028288423962739256
+gauss (a=..., b=..., x=...) at gauss.f90:56
+56	     do j=i+1,MATSIZE
+Continuing.
+Hardware watchpoint 2: ss
+
+Old value = -0.028288423962739256
+New value = -0.10772584337145805
+gauss (a=..., b=..., x=...) at gauss.f90:56
+56	     do j=i+1,MATSIZE
+Continuing.
+Hardware watchpoint 2: ss
+
+Old value = -0.10772584337145805
+New value = -0.090112438506848122
+gauss (a=..., b=..., x=...) at gauss.f90:56
+56	     do j=i+1,MATSIZE
+Continuing.
+Hardware watchpoint 2: ss
+
+Old value = -0.090112438506848122
+New value = -0.0069926683737533274
+gauss (a=..., b=..., x=...) at gauss.f90:56
+56	     do j=i+1,MATSIZE
+Continuing.
+Hardware watchpoint 2: ss
+
+Old value = -0.0069926683737533274
+New value = 0.428892365341
+gauss (a=..., b=..., x=...) at gauss.f90:56
+56	     do j=i+1,MATSIZE
+Continuing.
+Hardware watchpoint 2: ss
+
+Old value = 0.428892365341
+New value = 0.43178716855547911
+gauss (a=..., b=..., x=...) at gauss.f90:56
+56	     do j=i+1,MATSIZE
+Continuing.
+Hardware watchpoint 2: ss
+
+Old value = 0.43178716855547911
+New value = 0.44082869712412048
+gauss (a=..., b=..., x=...) at gauss.f90:56
+56	     do j=i+1,MATSIZE
+Continuing.
+Hardware watchpoint 2: ss
+
+Old value = 0.44082869712412048
+New value = 0.44743905642244847
+gauss (a=..., b=..., x=...) at gauss.f90:56
+56	     do j=i+1,MATSIZE
+Continuing.
+
+Watchpoint 2 deleted because the program has left the block in
+which its expression is valid.
+gaussmain () at gauss.f90:87
+87	  write(6,'(/a)') 'After'
+Continuing.
+[Inferior 1 (process 9678) exited normally]
+The program is not being run.

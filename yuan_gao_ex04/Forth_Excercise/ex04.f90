@@ -7,7 +7,7 @@ program matrix_multi_compare
   integer , parameter :: x=20000,y=15000,runs=20
   real :: array(x,y),a_diff,diff
   open (unit = 2, file = "data.dat")
-  do p=20,800
+  do p=800,800
      print*,p,"of 20 to 800"
      allocate(randarray1(p,p))
      allocate(randarray2(p,p))

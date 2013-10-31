@@ -1,0 +1,29 @@
+solution 
+
+
+a) Calculates the distribution of digits 0..9.
+
+Answer:
+
+The distribution trough 0 to 9 :
+
+0 -> 418918
+1 -> 419139
+2 -> 419163
+3 -> 419092
+4 -> 420392
+5 -> 419436
+6 -> 418413
+7 -> 419907
+8 -> 419652
+9 -> 420192
+
+
+b) Calculates the longest sequence of same digit.
+
+Answer:
+
+Number with the longest sequence :
+           9
+The length of longest sequence :
+           7

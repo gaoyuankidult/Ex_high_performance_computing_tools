@@ -15,7 +15,7 @@ program ff
   implicit none
   integer,dimension(:,:),allocatable :: a,b
   integer :: n,i,j,s
-  real(rk) :: t0,t1
+  real:: t0,t1
 
   n=3000
 
@@ -30,11 +30,15 @@ program ff
 
   call cpu_time(t0)
   ! Optimize the loops below.
-  do i=1,n
-     do j=1,n
+  do i=1,n,2
+     do j=1,n,2
         b(i,j)=a(j,i) 
+        b(i+1,j)=a(j,i+1)
+        b(i,j+1)=a(j+1,i)
+        b(i+1,j+1)=a(j+1,i+1)
      end do
   end do
+!  b = transpose(a)
   call cpu_time(t1)
 
   s=sum(b,mask=b<5)

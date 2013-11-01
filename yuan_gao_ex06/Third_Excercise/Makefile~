@@ -3,6 +3,8 @@ GF=gfortran
 O3FLAGS=  -O3
 O0FLAGS=  -O0
 
+
+
 all: O3 O0
 
 O0: 

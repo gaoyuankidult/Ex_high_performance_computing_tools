@@ -40,6 +40,9 @@ program dd
      do j=1,n2
         c(i)=c(i)+c(i+j-1)*b(j)
      end do
+     if(i==5) then
+        print*,c(i)
+     end if
   end do
   call cpu_time(t1)
 

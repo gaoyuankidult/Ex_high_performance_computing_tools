@@ -39,8 +39,8 @@ program cc
 
   call cpu_time(t0)
   ! Optimize the loops below.
-  do i=1,n
-     do j=1,n
+  do j=1,n
+     do i=1,n
         a(i,j)=d*b(i,j)/c(i)  
      end do
   end do

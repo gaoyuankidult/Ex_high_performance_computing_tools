@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "O0"
+for file in $(pwd)/*O0
+do
+  echo ${file##*/}
+  /$file
+done
+
+echo "O3"
+for file in $(pwd)/*O3
+do
+  echo ${file##*/}
+  /$file
+done
+
+
+

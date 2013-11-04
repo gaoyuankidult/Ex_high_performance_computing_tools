@@ -37,7 +37,7 @@ f0_O0
  f0  9.59999999999999881E-002          10
 
 
-Here the O0 part is the comparasion between the original file and the modified file using O3 optimization flag. For some programs a0, c0, e0, f0, the modified version also performs better. oringinal files b0 and d0 perform almost as same as the modified files using -O3 flags.
+Here the O0 part is the comparasion between the original file and the modified file using O3 optimization flag. For some programs a0, c0, e0, f0, the modified version also performs better. However, oringinal files b0 and d0 perform almost as same as the modified files using -O3 flags.
 O3
 a0_modified_O3
  a0  4.00000000000000355E-003   224960036

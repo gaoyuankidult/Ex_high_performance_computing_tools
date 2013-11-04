@@ -3,6 +3,8 @@ Solution:
 a) Problem 1. (4 points) Compare the CPU time used for execution of program ex6p1.f90 on the course web page1 using compiler options -On, where n=0,1,2,3. Comment the results.
 
 Answer: 
+The -O3 results to the fastest running process. The -O0 -O1 -O2 -O3 indeed have incremental performances.
+
 
 The compiler options used are 
 
@@ -21,6 +23,7 @@ CPU Time:  5.20000011E-02
 gfortran -O3 ex6p1.f90 -o ex6p1_O3
 
 CPU Time  4.79999930E-02
+
 
 
 

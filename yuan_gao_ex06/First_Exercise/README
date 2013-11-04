@@ -1,5 +1,11 @@
-The excercise source code: ex01.f90
+The excercise source code: ex6p1.f90
 
-The excutable of source code : a.out
+The excutable of source with flag O1 : ex6p1_O0
+
+The excutable of source with flag O1 : ex6p1_O1
+
+The excutable of source with flag O1 : ex6p1_O2
+
+The excutable of source with flag O1 : ex6p1_O3
 
 The solution of excercise : solution

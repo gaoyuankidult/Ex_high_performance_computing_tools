@@ -1,10 +1,7 @@
-The excercise source code: gauss.f90
+The excercise source code: ex02.f90
 
 The excutable of source code : a.out
 
-The input data: matrix
-
 The solution of the excercise : solution
 
-The log file of debugging insecond question : gdb.txt
 

@@ -1,4 +1,4 @@
-module sizes
+qmodule sizes
 
   integer,parameter :: ik=selected_int_kind(10)
   integer,parameter :: ik2=selected_int_kind(14)

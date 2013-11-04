@@ -29,10 +29,10 @@ program ee
 
   call cpu_time(t0)
   ! Optimize the loops below.
-  do i=2,n
-     do j=1,n
-        a(i,j)=a(i-1,j)/v+i/j
-        b(i,j)=b(i-1,j)/v+i/j
+  do j=1,n
+     do i=2,n
+        a(i,j)=a(i-1,j)/v+ i/j
+        b(i,j)=b(i-1,j)/v+ i/j
      end do
   end do
   call cpu_time(t1)

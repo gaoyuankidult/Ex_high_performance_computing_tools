@@ -53,10 +53,10 @@ program bb
   call cpu_time(t0)
   ! Optimize the loops below.
   do i=1,n
+     vx1=vel1(i)%x
+     vy1=vel1(i)%y
+     vz1=vel1(i)%z
      do j=1,n
-        vx1=vel1(i)%x
-        vy1=vel1(i)%y
-        vz1=vel1(i)%z
         vx2=vel2(j)%x
         vy2=vel2(j)%y
         vz2=vel2(j)%z

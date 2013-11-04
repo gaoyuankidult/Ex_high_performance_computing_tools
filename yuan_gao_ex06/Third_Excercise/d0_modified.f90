@@ -37,10 +37,15 @@ program dd
   call cpu_time(t0)
   ! Optimize the loops below.
   do i=1,n
-     do j=1,n2
-        c(i)=c(i)+c(i+j-1)*b(j)
-     end do
+     !     do j=1,n2
+     !     c(i)=c(i)+c(i+j-1)*b(j)
+     c(i)=sum(c(i:i+n2-1)*b)
+     if(i==5) then
+        print*,c(i)
+     end if
+     !     end do
   end do
+
   call cpu_time(t1)
 
   print *,'d0',t1-t0,sum(c)

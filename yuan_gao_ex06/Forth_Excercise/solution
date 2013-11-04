@@ -1,29 +1,22 @@
 solution 
 
 
-a) Calculates the distribution of digits 0..9.
+a) Compare the speeds of these two implementations when calculating th quantities and comment your results.
 
 Answer:
 
-The distribution trough 0 to 9 :
+Command used ->
 
-0 -> 418918
-1 -> 419139
-2 -> 419163
-3 -> 419092
-4 -> 420392
-5 -> 419436
-6 -> 418413
-7 -> 419907
-8 -> 419652
-9 -> 420192
+gfortran ex04.f90 
+./a.out
+
+Output ->
+
+ CPU Time for AOS
+  2.79999990E-02
+ CPU Time for SOA
+  1.20000001E-02
+
+In fortran SOA is faster then AOS.
 
 
-b) Calculates the longest sequence of same digit.
-
-Answer:
-
-Number with the longest sequence :
-           9
-The length of longest sequence :
-           7

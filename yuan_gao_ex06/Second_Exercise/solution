@@ -9,7 +9,7 @@ Answer:
 (b) in random order. Be careful to write the program in such a way that the only difference really is the order in which the array is gone through.
 
 Answer:
- The choose row-majored access to be perform the comparation. Going through the same order as stored in memory really helps the performance.
+ The choose row-majored access to perform the comparation. Going through the same order as stored in memory really helps the performance.
  CPU Time That Does Not Obey Storage Structure of System (Row-majored):
    1.1680000   
 

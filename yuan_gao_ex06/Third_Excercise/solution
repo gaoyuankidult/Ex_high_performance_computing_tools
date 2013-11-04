@@ -1,179 +1,68 @@
 solution
 
-a) your task is to find and correct them Return the corrected code and tell what bugs you found and how you corrected them.
+Compare the speeds of the original and the modified programs both with (-O3) and without (-O0) compiler optimization using whatever Fortran compiler you have at your disposal. Remember to mention the compiler you used.
 
-Answer: 
-The corrected code is in the same folder.
+The follows are the output of my programe.
+There are two parts for the following outputs. The O0 part is the comparasion between the original file and the modified file using O0 optimization flag. For all programs a0, b0, c0, d0, e0, f0, the modified version performs better.
 
-BUG 1: 
-integer,parameter :: jmin=1,jmax=1000 
+The compiler is gfortran, the detailed compile option is in Makefile. The running command is in run_script.sh.
 
-explaination 1: 
-as the bscale value is 100, the floor(bscale*x+0.5) will be in the range of [0,100[. As a consequence, the acceess of array should be from elements 1 to 100
+O0
 
-correction 1:
-changed to 
-integer,parameter :: jmin=1,jmax=100 
-
-
-
-
-
-BUG 2:
-
-Two Warnings
-Warning: Extension: REAL array index at (1)
-Warning: Deleted feature: Loop variable at (1) must be integer
-This means implicit none is lacking.
-
-explaination 2: 
-
-The variable r is implicitly defined
-
-correction 2:
-added 
-
-implicit none
-integer :: r
-
-
+a0_modified_O0
+ a0  4.39999999999999836E-002   224960036
+a0_O0
+ a0  4.79999999999999871E-002   224960036
+b0_modified_O0
+ b0   1.6879999999999999        1.6769227943265714     
+b0_O0
+ b0   2.1120000000000001        1.6769227943265714     
+c0_modified_O0
+ c0  9.20000000000000262E-002   12437842.140534319     
+c0_O0
+ c0  0.22000000000000003        12437842.140534319     
+d0_modified_O0
+   38541.945173192784     
+ d0  0.22799999999999998        5726126813.9726563     
+d0_O0
+   38549.172818155654     
+ d0  0.81999999999999995        5726875406.4457903     
+e0_modified_O0
+ e0  0.14799999999999996        137903310.85737681     
+e0_O0
+ e0  0.23999999999999994        137903310.85737681     
+f0_modified_O0
+ f0  4.80000004E-02          10
+f0_O0
+ f0  9.59999999999999881E-002          10
 
 
+Here the O0 part is the comparasion between the original file and the modified file using O3 optimization flag. For some programs a0, c0, e0, f0, the modified version also performs better. oringinal files b0 and d0 perform almost as same as the modified files using -O3 flags.
+O3
+a0_modified_O3
+ a0  4.00000000000000355E-003   224960036
+a0_O3
+ a0  4.39999999999999836E-002   224960036
+b0_modified_O3
+ b0  0.68799999999999994        1.6769227943265714     
+b0_O3
+ b0  0.68399999999999994        1.6769227943265714     
+c0_modified_O3
+ c0  3.59999999999999765E-002   12437842.140534319     
+c0_O3
+ c0  0.11199999999999999        12437842.140534319     
+d0_modified_O3
+   38541.945173192784     
+ d0  0.22399999999999998        5726126813.9726563     
+d0_O3
+   38549.172818155654     
+ d0  0.22399999999999998        5726875406.4457903     
+e0_modified_O3
+ e0  5.59999999999999942E-002   137903310.85737681     
+e0_O3
+ e0  0.23999999999999994        137903310.85737681     
+f0_modified_O3
+ f0  5.20000011E-02          10
+f0_O3
+ f0  9.19999999999999846E-002          10
 
-BUG 3:
-
-j=floor(bscale*x+0.5) does not provide a uniformly distributed number.
-
-explaination 3: 
-
-x is in [0,1[. => bscale*x is in [0,100[.    In this case the floor(bscale*x+0.5) will lead the propability of 100 to be halved.
-
-correction3:
-
-changed original code to j=floor(bscale*x+1)
-
-
-
-
-
-BUG 4:
-
-print *,r/bscale,bin(r)
-
-explaination 4: 
-
-The purpose of this program to calculate and print the distribution of uniform random numbers. Then we just need to print out the random number and its distribution.
-
-correction 4:
-changed original code to print *,r,bin(r)
-
-
-
-
-c) Finally, test the program and return the distribution plots you got.
-
-The distribution is as follows:
-
-           1       10047
-           2        9974
-           3       10173
-           4        9950
-           5       10057
-           6        9944
-           7       10190
-           8        9980
-           9       10059
-          10       10037
-          11        9955
-          12       10149
-          13        9993
-          14       10024
-          15        9948
-          16        9839
-          17        9827
-          18       10094
-          19        9705
-          20       10023
-          21       10057
-          22       10072
-          23       10026
-          24       10007
-          25       10014
-          26       10163
-          27       10174
-          28        9890
-          29       10058
-          30        9984
-          31       10027
-          32       10015
-          33       10042
-          34        9989
-          35        9931
-          36        9957
-          37        9882
-          38        9958
-          39        9935
-          40        9873
-          41       10110
-          42       10063
-          43        9948
-          44        9907
-          45       10247
-          46       10141
-          47       10104
-          48        9965
-          49        9972
-          50       10033
-          51        9863
-          52       10007
-          53       10060
-          54       10152
-          55        9994
-          56       10060
-          57        9977
-          58       10026
-          59       10070
-          60        9956
-          61        9927
-          62        9912
-          63       10084
-          64        9874
-          65        9857
-          66        9942
-          67       10142
-          68        9956
-          69       10001
-          70       10022
-          71       10098
-          72       10149
-          73       10042
-          74       10154
-          75       10066
-          76       10031
-          77        9810
-          78        9952
-          79       10016
-          80        9869
-          81        9897
-          82        9821
-          83       10023
-          84        9998
-          85        9945
-          86       10058
-          87        9885
-          88        9983
-          89       10202
-          90        9874
-          91       10091
-          92        9982
-          93       10019
-          94       10007
-          95        9839
-          96       10046
-          97       10171
-          98        9883
-          99        9918
-         100        9777
-
-The distribution plot is in the png file bar_char_distribution.png.
-The fortran code does not plot by itself. I think it is not a bug and then as the plotting funtion of fortran needs extenal packages, I used python to do this job.

@@ -1,13 +1,66 @@
 The excercise source code: ex5_corrected.f90
 
-The excutable of source code : a.out
+Make source file : Makefile
 
-The plotting script: plot.py
+Excusion script: run_script.sh
 
-The solution of exercise: solution
+Excutables of original files using O0 flag :
 
-The data file of random number distribution: data.dat
+a0_O0
+b0_O0            
+d0_O0            
+f0_O0
+c0_O0            
+e0_O0
 
-The plot of random number distributuion : bar_char_distribution.png
+Excutables of original files using O3 flag :
+
+a0_O3
+b0_O3            
+d0_O3            
+f0_O3 
+c0_O3            
+e0_O3 
+
+Excutables of modified files using O0 flag :
+
+a0_modified_O0  
+b0_modified_O0 
+   c0_modified_O0  
+d0_modified_O0  
+e0_modified_O0   
+f0_modified_O0
+
+Excutables of modified files using O3 flag :
+
+a0_modified_O3
+b0_modified_O3   
+c0_modified_O3  
+d0_modified_O3 
+e0_modified_O3  
+f0_modified_O3 
+
+Original files :
+
+a0.f90   
+b0.f90        
+c0.f90           
+d0.f90        
+e0.f90   
+f0.f90 
+
+Modified files :
+
+a0_modified.f90             
+b0_modified.f90  
+c0_modified.f90
+e0_modified.f90  
+d0_modified.f90  
+f0_modified.f90 
+
+
+                                     
+
+
 
  

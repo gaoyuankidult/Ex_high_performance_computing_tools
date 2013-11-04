@@ -21,12 +21,12 @@ program array_order_test
   allocate(r2%x(N))
   allocate(r2%y(N))
   allocate(r2%z(N))
-  r1%x=0
-  r1%y=0
-  r1%z=0
-  r2%x=0
-  r2%y=0
-  r2%z=0
+  r1%x=1
+  r1%y=1
+  r1%z=1
+  r2%x=1
+  r2%y=1
+  r2%z=1
 
   sum_value = 0
   call cpu_time(t1)
@@ -52,9 +52,9 @@ program array_order_test
   end do
   print*,sum_value
   call cpu_time(t4)
-  print*,"CPU Time for SOA"
-  print*,(t2-t1)
   print*,"CPU Time for AOS"
+  print*,(t2-t1)
+  print*,"CPU Time for SOA"
   print*,(t4-t3)
   stop
 end program array_order_test

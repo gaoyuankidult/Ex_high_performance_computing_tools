@@ -1,0 +1,11 @@
+The excercise source code: ex01.f90
+
+The excutable of source file: a.out
+
+data file: data_signle_&_double.dat
+
+plotting script: plot.py
+
+figure of relation between looping amount and time consumption: plot_difference_singel_double.png
+
+The solution of excercise : solution

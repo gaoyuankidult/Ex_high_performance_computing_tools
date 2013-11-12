@@ -1,0 +1,31 @@
+solution
+
+a) Demonstrate that the compiler has been able to apply the SIMD features in the loop by printing the vectorization report using the option above.
+
+Answer:
+The compiler option that I used for compiling is as follows:
+
+gfortran -O2 -ftree-vectorize -ftree-vectorizer-verbose=2 ex03.f90
+
+The output is:
+
+ex03.f90:11: note: LOOP VECTORIZED.
+ex03.f90:1: note: vectorized 1 loops in function.
+
+
+b) Compare the CPU time used with and without SIMD extensions.
+
+I kept some compiler option just for readability.
+
+with SIMD :
+
+gfortran -O2 -ftree-vectorize -ftree-vectorizer-verbose=2 ex03.f90
+time consumed
+0.13199997
+
+Without SIMD :
+
+gfortran -O2 -fno-tree-vectorize -ftree-vectorizer-verbose=2 ex03.f90
+time consumed
+0.65999997
+

@@ -1,0 +1,28 @@
+solution
+
+a) Compare the CPU time consumed for these two products. Suitable matrix size is about 1000 x 1000. Test with optimization options -O0 and -O3.
+
+Answer:
+
+Test with -O0 option:
+
+gfortran ex02.f90 -O0 
+./a.out
+
+ Time of C = A * B
+   7.8599997    
+ Time of C = A^t * B
+   7.6840000    
+
+Test with -O3 option:
+
+gfortran ex02.f90 -O3
+./a.out
+ Time of C = A * B
+   1.9200000    
+ Time of C = A^t * B
+   1.9280000  
+
+
+
+

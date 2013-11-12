@@ -15,7 +15,7 @@ with open("data_signle_&_double.dat",'r') as f:
 
 plt.plot(dimension,runtime_singel,label = "single precision")
 plt.plot(dimension,runtime_double,'r',label="double precision")
-plt.xlabel('number os loops')
+plt.xlabel('number of loops')
 plt.ylabel('time consumption(s)')
 plt.legend( loc='upper left', numpoints = 1 )
 #plt.loglog(runtime_do,runtime_matmul,'ro',basex=2,basey=2)

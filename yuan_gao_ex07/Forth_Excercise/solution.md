@@ -24,13 +24,13 @@ In a technique report of CERN, it was siad that the OpenMP was used for Maximum 
 
 Answer:
 
-#1) Tianhe-2 
+##1) Tianhe-2 
 Tianhe has-2  in total 3,120,000 cores and it is largest and fastest computer in the world. However, the utilization of the processors is much lower than other super computers. 
 
-#2) Titan 
+##2) Titan 
 Titan has 299,008 cores. It is now the second fastest coputer in the world.
 
-#3) IBM Sequoia 
+##3) IBM Sequoia 
 IBM Sequoia is the third fastest computer in the world. It has 705,024 cores. It has more cores than Titan, but it run a little bit slower due to other floating point computing devices.
 
 

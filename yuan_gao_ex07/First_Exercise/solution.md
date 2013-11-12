@@ -1,6 +1,6 @@
 solution:
 
-##a) measure the CPU time as a function of for being either single or double precision.
+#a) measure the CPU time as a function of for being either single or double precision.
 Comment your results.
 
 Answer:

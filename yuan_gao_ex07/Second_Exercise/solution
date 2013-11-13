@@ -3,8 +3,7 @@ solution
 a) Compare the CPU time consumed for these two products. Suitable matrix size is about 1000 x 1000. Test with optimization options -O0 and -O3.
 
 Answer:
-
-Test with -O0 option:
+1000 X 1000 Test with -O0 option:
 
 gfortran ex02.f90 -O0 
 ./a.out
@@ -14,7 +13,7 @@ gfortran ex02.f90 -O0
  Time of C = A^t * B
    7.6840000    
 
-Test with -O3 option:
+1000 X 1000 Test with -O3 option:
 
 gfortran ex02.f90 -O3
 ./a.out
@@ -24,5 +23,10 @@ gfortran ex02.f90 -O3
    1.9280000  
 
 
+However, an interesting thing to notice is that if I use c=matmul(transpose(a),b), the computation time is much more longer than a=transpose(a)   c=matmul(a,b). No mater I use 1000 * 1000 matrix or 2000*2000 matrix and This also holds for whether I use -O0 or -O3 flag.
 
-
+1000*1000_transpose_inside_matmul_O0.png
+2000*2000_transpose_inside_matmul_O0.png
+2000*2000_transpose_inside_matmul_O3.png
+2000*2000_transpose_outside_matmul_O0.png
+2000*2000_transpose_outside_matmul_O3.png

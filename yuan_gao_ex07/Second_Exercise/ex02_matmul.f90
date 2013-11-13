@@ -1,6 +1,6 @@
 program array_order_test
   implicit none
-  integer,parameter :: n=2000
+  integer,parameter :: n=1000
   real :: a(n,n),b(n,n),c(n,n)
   integer :: i,j,k
   real :: t1,t2,t3,t4

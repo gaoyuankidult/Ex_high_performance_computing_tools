@@ -25,6 +25,9 @@ gfortran ex02.f90 -O3
 
 However, an interesting thing to notice is that if I use c=matmul(transpose(a),b), the computation time is much more longer than a=transpose(a)   c=matmul(a,b). No mater I use 1000 * 1000 matrix or 2000*2000 matrix and This also holds for whether I use -O0 or -O3 flag.
 
+inside means c=matmul(transpose(a),b) line of code
+
+outside means  a=transpose(a)   c=matmul(a,b)  lines of code
 
 
 1000*1000_transpose_inside_matmul_O0.png

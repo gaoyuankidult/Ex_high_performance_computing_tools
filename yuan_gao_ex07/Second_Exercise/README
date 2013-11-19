@@ -1,5 +1,7 @@
 The excercise source code: ex02.f90
 
+The excercise source code reimplemented using matmul: ex02_matmul.f90
+
 The excutable of source code : a.out
 
 The solution of the excercise : solution

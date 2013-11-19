@@ -1,0 +1,36 @@
+sending message : 4 sending to: 5 from: 4
+first sending message is: 3 sender: 3
+
+sending message : 6 sending to: 7 from: 6
+first sending message is: 5 sender: 5
+
+sending message : 8 sending to: 9 from: 8
+first sending message is: 7 sender: 7
+
+sending message : 0 sending to: 1 from: 0
+first sending message is: 11 sender: 11
+
+sending message : 10 sending to: 11 from: 10
+first sending message is: 9 sender: 9
+
+sending message : 2 sending to: 3 from: 2
+first sending message is: 1 sender: 1
+
+sending message : 9 sending to: 10 from: 9
+first sending message is: 8 sender: 8
+
+sending message : 7 sending to: 8 from: 7
+first sending message is: 6 sender: 6
+
+sending message : 3 sending to: 4 from: 3
+first sending message is: 2 sender: 2
+
+sending message : 1 sending to: 2 from: 1
+first sending message is: 0 sender: 0
+
+sending message : 5 sending to: 6 from: 5
+first sending message is: 4 sender: 4
+
+sending message : 11 sending to: 0 from: 11
+first sending message is: 10 sender: 10
+

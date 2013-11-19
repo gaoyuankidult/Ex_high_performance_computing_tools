@@ -1,0 +1,17 @@
+The excercise source code: mpiexample.c
+
+The excutable of source file: mpiexample
+
+output file for using only one processor: mpiexample1.out
+
+output file for using two processors: mpiexample2.out
+
+output file for using four processors: mpiexample4.out
+
+script output file for using only one processor: out_937313
+
+script output file for using two processors: out_937321
+
+script output file for using four processors: out_937322
+
+The solution of excercise : solution

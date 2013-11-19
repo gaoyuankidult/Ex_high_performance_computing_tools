@@ -1,0 +1,51 @@
+
+
+---------------------------------------------------------------------
+
+   This is a simple example to demonstrate parallel MPI runs on
+   alcyone.grid.helsinki.fi.
+
+       A.Kuronen, antti.kuronen@helsinki.fi, 5.3.2012, 5.11.2013
+
+---------------------------------------------------------------------
+
+
+Compile and link:
+
+	module load openmpi-x86_64
+
+	mpicc -o mpiexample mpiexample.c
+or
+	mpif90 -o mpiexample mpiexample.f90
+
+
+Send the batch job for execution:
+
+	sbatch submit_parallel
+or
+	sbatch submit_parallel_use_scratch
+
+
+Check out the progress of your job:
+
+	squeue
+or
+	squeue -u <username>
+
+
+Ouput goes to files 'out_<job#>' and 'mpiexample.out'.  Check
+directory 'output' for output of an example of a successful run.
+
+Use the batch script 'submit_parallel_use_scratch' if your code
+doesn't produce large amounts of output. The difference between
+'submit_parallel' and 'submit_parallel_use_scratch' is that the first
+one creates a temporary folder on the /tmp filesystem of the
+computational node. Consequently, the code and its input must be
+copied there before running the code and output copied back to the
+folder where the job was submitted from.
+
+For runs using more than 12 cores (number of cores in one node) you
+have to use script 'submit_parallel_use_scratch' because a node can't
+see other nodes' /tmp file systems.
+
+

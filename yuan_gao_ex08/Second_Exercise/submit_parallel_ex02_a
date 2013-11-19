@@ -1,0 +1,114 @@
+#!/bin/bash
+
+#SBATCH -e out_%j            # stderr
+#SBATCH -o out_%j            # stdout
+#SBATCH --mem-per-cpu=300    # memory
+#SBATCH -t 00:01:00          # time needed dd-hh:mm:ss
+#SBATCH -n 12                # number of cores
+#SBATCH --ntasks-per-node=12 #
+#SBATCH -p debug_par         # queue
+
+#-----------------------------------------------------------------------
+#
+# Cleanup function
+#
+# This function is called when 
+#     - the job finishes
+#     - desired time limit is exceeded
+#     - user issues the scancel command
+#
+# In the last two cases the job has the time specified in the SLURM
+# parameter KillWait to do the cleanup (i.e. copy the output files and
+# delete the run directory on the computational node). Currently
+# KillWait=30s.
+#
+# This way you need not worry about losing your results if you exceed
+# yout running time limit. If you run your code from the /scratch 
+# disk (i.e. don't use compute node /tmp) you do not need this feature.
+#
+#-----------------------------------------------------------------------
+
+function Cleanup {
+    echo -e "\n=== Cleanup ===\n"
+    cp ex02_a.out $sd/
+    cd $sd/
+    rm -rf $cd
+    exit
+}
+
+trap 'Cleanup' SIGTERM
+
+
+#-------------------------------------------------------
+#
+# First check that we have enough disk space on /tmp.
+# If not the script exits with status 64. 
+#
+# The limit (in %) is given in shell variable tmplimit 
+# (note: it is an integer).
+#
+#-------------------------------------------------------
+
+tmplimit=95
+space=$(df /tmp | awk '!/Filesystem/ && /%/ {sub("%","",$5); print $5+0;}')
+echo
+echo "Disk space usage on /tmp on computation node:" $space "%"
+if test 0$space -ge $tmplimit
+then
+    echo
+    echo "$0 script check:"
+    echo "File space on tmp on node" `hostname` "dangerously low. Aborting job."
+    echo "Please ask an administrator to clean up /tmp on that node."
+    echo
+    df /tmp
+    echo
+    exit 64
+fi
+
+
+#-------------------------------------------------------
+# Create the computation work directory.
+#
+# Naming pattern is '/tmp/<USERNAME>/__<CWD>_<N>/', 
+# where <CWD> is the trailing part of the current 
+#             directory and 
+#       <ID>  is the process ID of the current shell 
+#             (just to get a unique name).
+#-------------------------------------------------------
+
+sd=`pwd`
+prefix=/tmp/$USER
+if [ ! -d $prefix ]; then
+   mkdir $prefix
+fi
+cd=${sd/$HOME/}
+cd=${cd//\//__}
+cd=$prefix/${cd}_${SLURM_JOB_ID}
+mkdir $cd
+
+
+#-------------------------------------------------------
+# Copy stuff to running directory
+#-------------------------------------------------------
+
+cp ex02_a $cd/
+cd $cd/
+
+
+#-------------------------------------------------------
+# Run the code
+#-------------------------------------------------------
+
+echo -e "\n=== Run started $(date) ===\n"
+
+module load openmpi-x86_64
+srun --resv-ports  ./ex02_a testing1 testing2 &> ex02_a.out
+
+
+#---------------------------------------------------------
+# Copy results back (done in function Cleanup define above)
+#---------------------------------------------------------
+
+echo -e "\n=== Run finished $(date) ===\n"
+
+Cleanup

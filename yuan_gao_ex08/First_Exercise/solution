@@ -1,0 +1,28 @@
+solution
+
+a) Compile and run the source mpiexample.f90 (or .c) in the package MPI starter kit1. Do the run with processor numbers 1, 2 and 4. As the solution, send the output files.
+
+Answer: 
+the processor number can be spicified by 
+
+sbatch -n
+
+I used 
+
+sbatch -n 1 
+sbatch -n 2
+sbatch -n 4
+
+to run the program. The output I got are in the files 
+
+mpiexample1.out
+mpiexample2.out
+mpiexample3.out
+
+respectively.
+
+The out script files are contained in 
+
+out_937313
+out_937321
+out_937322

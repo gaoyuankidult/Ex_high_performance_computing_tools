@@ -1,0 +1,13 @@
+solution
+
+a) Write a parallel program where all processes that have their id-number less than ntasks-1 send a message to the next process.
+
+The program sends the information indicated as (0 -> 1, 1 ->2, ..., ntasks-2 -> ntasks-1).
+
+The output of the program is contained in ex02_a.out
+
+b) Change the program in (a) so that also the process with id ntasks-1, sends the message to process 0. Explain what you see and what you would expect.
+
+The output of the program is contained in ex02_b.out. I expected each process print out we it sends and what It gets. It accually print out what I expected.
+
+

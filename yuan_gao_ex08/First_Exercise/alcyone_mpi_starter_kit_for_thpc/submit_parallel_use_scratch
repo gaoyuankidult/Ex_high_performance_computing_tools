@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#SBATCH -e out_%j            # stderr
+#SBATCH -o out_%j            # stdout
+#SBATCH --mem-per-cpu=300    # memory
+#SBATCH -t 00:01:00          # time needed dd-hh:mm:ss
+#SBATCH -n 12                # number of cores
+#SBATCH --ntasks-per-node=12 #
+#SBATCH -p debug_par         # queue
+
+echo -e "\n=== Run started $(date) ===\n"
+
+module load openmpi-x86_64
+srun --resv-ports  ./mpiexample testing1 testing2 &> mpiexample.out
+
+echo -e "\n=== Run finished $(date) ===\n"

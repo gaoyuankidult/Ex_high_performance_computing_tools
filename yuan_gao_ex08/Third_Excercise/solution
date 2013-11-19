@@ -1,0 +1,8 @@
+solution
+
+a) Write a program that gets an integer value from command
+line argument and distributes the value to all processes. Each process should print out its rank and the value it received. Values should be read until a negative integer is given as input.
+
+The output is in the file ex03.out
+
+The ourpur of receiving a negative value is the file ex03_negative.out

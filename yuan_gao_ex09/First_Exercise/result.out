@@ -1,0 +1,36 @@
+first received message is: 0 sender: 5 received on process: 6
+sending message : 0  sending to: 7 from: 6
+
+first received message is: 0 sender: 0 received on process: 1
+sending message : 0  sending to: 2 from: 1
+
+first received message is: 0 sender: 1 received on process: 2
+sending message : 0  sending to: 3 from: 2
+
+first received message is: 0 sender: 2 received on process: 3
+sending message : 0  sending to: 4 from: 3
+
+first received message is: 0 sender: 3 received on process: 4
+sending message : 0  sending to: 5 from: 4
+
+first received message is: 0 sender: 9 received on process: 10
+sending message : 0  sending to: 11 from: 10
+
+first received message is: 0 sender: 6 received on process: 7
+sending message : 0  sending to: 8 from: 7
+
+first received message is: 0 sender: 4 received on process: 5
+sending message : 0  sending to: 6 from: 5
+
+first received message is: 0 sender: 7 received on process: 8
+sending message : 0  sending to: 9 from: 8
+
+first received message is: 0 sender: 8 received on process: 9
+sending message : 0  sending to: 10 from: 9
+
+first received message is: 0 sender: 10 received on process: 11
+sending message : 0  sending to: 0 from: 11
+
+sending message : 0  sending to: 1 from: 0
+
+first received message is: 0 sender: 11 received on process: 0

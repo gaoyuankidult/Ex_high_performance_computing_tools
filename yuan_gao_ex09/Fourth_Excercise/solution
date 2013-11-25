@@ -1,0 +1,24 @@
+solution
+
+1) Write an MPI program that transposes a square matrix of size by using the mpi_alltoall routine. 
+
+Answer:
+
+The command that I used for the running code
+
+mpirun -np 4 ./a.out 
+
+The output of the program.
+
+recv vector of process 0: 5 10 15 20
+recv vector of process 1: 6 11 16 21
+recv vector of process 2: 7 12 17 22
+recv vector of process 3: 8 13 18 23
+
+
+send vector of process 3: 5 6 7 8
+send vector of process 3: 10 11 12 13
+send vector of process 3: 15 16 17 18
+send vector of process 3: 20 21 22 23
+
+

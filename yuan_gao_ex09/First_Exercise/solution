@@ -1,0 +1,9 @@
+solution
+
+a) Write an MPI program that takes data from process zero and sends it to all other processes by sending it in a ring. 
+
+Answer:
+The progress has been finished in a ring topology.
+The source file is contained in the file ex01.c
+
+

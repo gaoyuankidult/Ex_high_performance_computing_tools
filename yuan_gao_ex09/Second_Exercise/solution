@@ -1,0 +1,22 @@
+solution
+
+a) How does the time taken by mpi_reduce (operation mpi_sum) behave as a function of the number of processes?
+
+The time increase as the number of processors increases. However, we need more data to support this claim. As there are some randomness involved in the measurement.
+
+b) Plot the results and comment your observations.
+
+The time spent in the process of each node increases along with the number of nodes increase. The plot result is in the file time_nodesNo_relation.png.
+
+The environment was:
+
+  Local host:    alcyone.grid.helsinki.fi
+  OMPI source:   btl_openib_component.c:1115
+  Function:      ompi_free_list_init_ex_new()
+  Device:        mlx4_0
+  Memlock limit: 65536
+
+
+
+
+

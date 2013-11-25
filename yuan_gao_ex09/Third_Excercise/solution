@@ -1,0 +1,14 @@
+solution
+
+a) Write an MPI program in which nprocs processes search an array in parallel (each gets a nprocs th part of the elements to search).
+
+The command used is mpirun -np 4 ./a.out.
+
+The ourput is:
+
+Process:0 stopped at local index 47
+Process:1 stopped at local index 59
+Process:3 stopped at local index 99
+Process:2 found it at local index 34
+
+

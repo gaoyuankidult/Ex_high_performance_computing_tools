@@ -1,0 +1,81 @@
+solution
+
+a) Try to parallellize the 1D molecular dynamics program of exercise 10 using OpenMP. Con-
+centrate on the loops over particles. Report the results of your speed measurements. If pos-
+sible use more than two threads.
+
+Answer:
+
+The parallelized file is called md1d_openmp.f90.
+The results of using following coefficients 
+
+./a.out 30000 0.01 500 1 0 0 $THREAD
+
+are as following:
+
+1 Threads
+ The program time with openmp:   8.1770781930099474  
+2 Threads
+ The program time with openmp:   4.5096074110042537
+3 Threads
+ The program time with openmp:   3.3926945080020232
+4 Threads
+ The program time with openmp:   3.3926945080020232	
+5 Threads
+ The program time with openmp:   3.9226077930070460
+6 Threads
+ The program time with openmp:   3.5025866400101222 
+7 Threads
+ The program time with openmp:   3.0093004289956298 
+8 Threads
+ The program time with openmp:   2.8894716619979590 
+
+A plot of above records is stored as 
+
+openmp_plot.png
+
+######## PLATFORM INFORMATION ###############
+
+EIGHT FOLLOWING DISTINCT CORES, UBUNTU 11.04 INTEL I7
+
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 44
+model name	: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+stepping	: 2
+cpu MHz		: 1600.000
+cache size	: 12288 KB
+physical id	: 0
+siblings	: 12
+core id		: 0
+cpu cores	: 6
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 11
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 popcnt aes lahf_lm ida arat epb dts tpr_shadow vnmi flexpriority ept vpid
+bogomips	: 4799.89
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 40 bits physical, 48 bits virtual
+power management:
+
+################################################
+
+
+b) Compare the performace of MPI and OpenMP versions of the code.
+
+Answer:
+
+The MPI version of code is faster on cluster flatforms at lest on alcyone cluster and on the ukko cluster(in computer science department).
+
+My experience is that the speed of MPI is generally faster on cluster. That is because the threads are normally creaded on the nodes. 
+And the MPI method is very show on a singel chip computer(with multi cores).  I think that is caused by a shared-memory architecture.
+
+I tested on several platforms and felt that it is somehow meaningless to use OpenMP with most distributed memory platforms nowadays consisting of SMP or NUMA nodes.
+I also think OpenMP and MPI can perfectly work together - OpenMP feeds the cores on each node and MPI communicates between the nodes. 
+
+

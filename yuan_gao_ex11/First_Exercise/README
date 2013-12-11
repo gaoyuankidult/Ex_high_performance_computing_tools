@@ -1,0 +1,19 @@
+The excercise source code: md1d_openmp.f90
+
+The excutable of source file: a.out
+
+The excution script file: openmp_script.sh
+
+The solution of excercise : solution
+
+The plot of the performance of openMP on my computer : openmp_plot.png
+
+The record of the performance of openMP on my computer : record_gao_computer
+
+A file that compares the performance between with mpi or without mpi: mpi_compare.sh
+
+A file that compares the performance between with openmp or without openmp: openmp_script.sh
+
+A file that compares the performance among normal, openMP and MPI: compare_script.sh
+
+

@@ -1,0 +1,20 @@
+ The program time without openmp:   6.6040000000000001     
+
+./a.out 30000 0.01 500 1 0 0 $THREAD
+Thread 1
+ The program time with openmp:   8.1770781930099474  
+Thread 2
+ The program time with openmp:   4.5096074110042537
+Thread 3 
+ The program time with openmp:   3.3926945080020232
+Thread 4
+ The program time with openmp:   3.3926945080020232	
+Thread 5
+ The program time with openmp:   3.9226077930070460
+Thread 6  
+ The program time with openmp:   3.5025866400101222 
+Thread 7
+ The program time with openmp:   3.0093004289956298 
+Thread 8
+ The program time with openmp:   2.8894716619979590 
+
